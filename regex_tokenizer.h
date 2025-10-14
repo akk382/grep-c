@@ -5,7 +5,7 @@
 #ifndef REGEX_TOKENIZER_H
 #define REGEX_TOKENIZER_H
 
-typedef enum RegexTokens {
+typedef enum RegexLexeme {
     BEGIN_T,
     B_SLASH_T,
     LITERAL_T,
@@ -15,10 +15,16 @@ typedef enum RegexTokens {
     CONCAT_T,
     END_T,
     EOL_T, // when we encounter '\0';
-} RegexTokens;
+} RegexLexeme;
+
+typedef struct RegexToken {
+    RegexLexeme lexeme;
+    char value;
+} RegexToken;
+
 
 typedef struct Lexer {
-    RegexTokens* tokens;
+    RegexToken* tokens;
     int token_pos;
     const char* pattern;
     char curr_char;

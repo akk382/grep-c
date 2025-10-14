@@ -23,4 +23,8 @@ add_executable(grep_c main.c
         concatenate_tester.c
         regex_tokenizer.c
         regex_tokenizer.h
-        tokenizer_tester.c)
+        tokenizer_tester.c
+        regex_matcher.c
+        regex_matcher.h
+        utility.c
+        utility.h)

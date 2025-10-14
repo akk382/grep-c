@@ -2,23 +2,18 @@
 // Created by Arun on 10/14/2025.
 //
 
-#include <stdio.h>
-#include <stdlib.h>
+#include "regex_matcher.h"
 
+#include "literal.h"
 #include "regex_tokenizer.h"
 #include "utility.h"
 
-int main() {
+int match(const char* input_string, const char* pattern) {
     Lexer lexer;
-    const char* pattern = "cfsg\\d";
     init_lexer(&lexer, pattern);
     tokenize(&lexer);
 
-    RegexToken* mem_to_free = lexer.tokens;
-
     print_tokens(lexer);
 
-    free(mem_to_free);
-
-    return 0;
+    // TODO: We need struct with Token and Value(for literals);
 }
