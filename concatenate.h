@@ -7,4 +7,6 @@
 
 #include "regex_class.h"
 
+int concatenate(RegexClass* curr_state, RegexClass* next_state, const char* input_string, const char* literal);
+
 #endif //CONCATENATE_H

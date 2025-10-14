@@ -5,9 +5,12 @@
 #include "digit.h"
 
 #include <ctype.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 // \d
 int digit_match_anywhere(RegexClass* curr_state, const char* input_string) {
+    if (!input_string || *input_string == '\0') return 0;
     if (!*curr_state) *curr_state = DIGIT;
     while (*input_string) {
         switch (*curr_state) {

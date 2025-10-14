@@ -8,6 +8,7 @@
 
 // any character
 int match_literal_anywhere(RegexClass* curr_state, const char* input_string, const char literal) {
+    if (!input_string || *input_string == '\0') return 0;
     if (!*curr_state) *curr_state = LITERAL;
     while (*input_string) {
         switch (*curr_state) {

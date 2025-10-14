@@ -14,4 +14,10 @@ add_executable(grep_c main.c
         concatenate.h
         regex_class.h
         plus.c
-        plus.h)
+        plus.h
+        digit_tester.c
+        literal_tester.c
+        assert.c
+        assert.h
+        star_tester.c
+        concatenate_tester.c)
