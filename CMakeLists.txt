@@ -20,4 +20,7 @@ add_executable(grep_c main.c
         assert.c
         assert.h
         star_tester.c
-        concatenate_tester.c)
+        concatenate_tester.c
+        regex_tokenizer.c
+        regex_tokenizer.h
+        tokenizer_tester.c)
