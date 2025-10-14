@@ -7,6 +7,6 @@
 
 #include "regex_class.h"
 
-int star(RegexClass* curr_class, const char* input_string, const char literal);
+int star(RegexClass* curr_class, const char* input_string, const char* literal);
 
 #endif //STAR_H

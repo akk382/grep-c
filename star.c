@@ -7,7 +7,7 @@
 #include "digit.h"
 #include "literal.h"
 
-int star(RegexClass* curr_class, const char* input_string, const char literal) {
+int star(RegexClass* curr_class, const char* input_string, const char* literal) {
     // start with accepted state
     // make epsilon transition to the next state's(=curr state, because *) start state
     // match the class with automaton
@@ -20,7 +20,7 @@ int star(RegexClass* curr_class, const char* input_string, const char literal) {
             return 1;
         case LITERAL:
         case LITERAL_MATCHED:
-            while (rematch_next_literal(curr_class, input_string, literal)) input_string++;
+            while (rematch_next_literal(curr_class, input_string, *literal)) input_string++;
             return 1;
         default: return 0;
     }

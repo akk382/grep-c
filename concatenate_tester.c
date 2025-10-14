@@ -56,6 +56,6 @@ void test_concatenate() {
     assert("test_concat: digit -> literal", res, 0);
 }
 
-int main() {
+int main3() {
     test_concatenate();
 }
